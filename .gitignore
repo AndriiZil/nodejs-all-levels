@@ -1,0 +1,4 @@
+.idea
+node_modules
+socket/simple-socket/node_modules
+socket/namespaces/node_modules
