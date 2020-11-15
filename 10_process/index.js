@@ -182,4 +182,4 @@ console.log(process.report);
 */
 
 
-console.log(process.report.getReport());
+console.log(process.report.writeReport());

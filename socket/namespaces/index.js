@@ -9,10 +9,10 @@ const io = socket(server);
 const host = '127.0.0.1';
 const port = 7001;
 
-const nmspc1 = io.of('/users');
-const nmspc2 = io.of('/orders');
+const usersNamespace = io.of('/users');
+const ordersNameSpace = io.of('/orders');
 
-nmspc1.on('connection', (socket) => {
+usersNamespace.on('connection', (socket) => {
     console.log(`Client ${socket.id} connected to /users`);
 
     socket.on('message', (msg) => {
@@ -20,12 +20,20 @@ nmspc1.on('connection', (socket) => {
     });
 
     socket.emit('message', 'Message to the room /users');
+
+    socket.on('disconnect', () => {
+        console.log(`Client with id ${socket.id} disconnected`)
+    })
 });
 
-nmspc2.on('connection', (socket) => {
+ordersNameSpace.on('connection', (socket) => {
     console.log(
         `Client ${socket.id} connected to /orders`
     )
+
+    socket.on('disconnect', () => {
+        console.log(`Client with id ${socket.id} disconnected`)
+    })
 });
 
 app.use(express.static(__dirname));
