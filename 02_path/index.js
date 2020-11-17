@@ -1,10 +1,10 @@
 const path = require('path');
 
-console.log('__filename', __filename); // /home/andrii/Documents/github/nodejs-all-levels/02_path/one-way-encryption.js
+console.log('__filename', __filename); // /home/andrii/Documents/github/nodejs-all-levels/02_path/index.js
 
 console.log('__dirname', __dirname); // /home/andrii/Documents/github/nodejs-all-levels/02_path
 
-console.log('path.basename(__filename)', path.basename(__filename)); // one-way-encryption.js
+console.log('path.basename(__filename)', path.basename(__filename)); // index.js
 
 console.log('path.dirname(__filename)', path.dirname(__filename)); // /home/andrii/Documents/github/nodejs-all-levels/02_path
 
@@ -22,18 +22,12 @@ console.log('path.join()', path.join(__dirname, '../.env')); // /home/andrii/Doc
 
 console.log('path.normalize(\'/foo/bar//baz/asdf/quux/..\')', path.normalize('/foo/bar//baz/asdf/quux/..')); // /foo/bar/baz/asdf
 
-console.log('path.parse(__dirname)', path.parse(__filename)); /*
+console.log('path.parse(__filename)', path.parse(__filename)); /*
     {
         root: '/',
-        dir: '/home/andrii/Documents/github/nodejs-all-levels',
-        base: '02_path',
-        ext: '',
-        name: '02_path'
+        dir: '/home/andrii/Documents/github/nodejs-all-levels/02_path',
+        base: 'index.js',
+        ext: '.js',
+        name: 'index'
      }
 */
-
-
-
-
-
-

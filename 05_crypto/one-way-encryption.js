@@ -11,6 +11,6 @@ crypto.randomBytes(64, (err, buf) => {
     const salt = buf.toString('base64');
     console.log('salt:', salt); // 0uMWKd0FCyVHH60cdRWaBuCQFdW+0ORhYZzIBJ61MgDQvHurZirg4RjkxThAemTNWHATl4amvYdAkH8rlk78DA== // random
     crypto.pbkdf2(string, salt, 10000, 64, 'sha512', (err, key) => {
-        console.log('password: ', key.toString('base64')); // F2qdg257xtu2y3PsZ0sL0og0qsDKFLbFP/ZF8ORB2a9asMZtMN0rGexMTb34uDodBwJHPZq6yAiPW8VvDPSDBA==
+        console.log('password:', key.toString('base64')); // F2qdg257xtu2y3PsZ0sL0og0qsDKFLbFP/ZF8ORB2a9asMZtMN0rGexMTb34uDodBwJHPZq6yAiPW8VvDPSDBA==
     })
 });
