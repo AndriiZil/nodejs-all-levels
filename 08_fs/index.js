@@ -49,6 +49,23 @@ fs.mkdir('apple', { recursive: true }, (err) => {
     if (err) throw err;
 });
 
+// Read dir
+fs.readdir(__dirname, (err, data) => {
+    if (err) console.log(err);
+    console.log(data);
+});
+/*
+    [
+      'example.txt',
+      'index.js',
+      'message.txt',
+      'node.txt',
+      'tmp',
+      'watch-dir.js',
+      'watch-file.js'
+    ]
+* */
+
 // the first argument si path to file or filename if it in the same directory
 fs.readFile(file, 'utf-8', (err, data) => {
     if (err) throw err;
@@ -78,3 +95,30 @@ fs.writeFile('node.txt', 'Hello Node.js', 'utf8', (err) => {
     if (err) throw err;
     console.log('file was writen');
 });
+
+// Statistic of file
+fs.stat('node.txt', (err, data) => {
+    if (err) console.log(err);
+    console.log(data);
+}); /*
+    {
+      dev: 2050,
+      mode: 33204,
+      nlink: 1,
+      uid: 1000,
+      gid: 1000,
+      rdev: 0,
+      blksize: 4096,
+      ino: 2360712,
+      size: 13,
+      blocks: 8,
+      atimeMs: 1605268349126.944,
+      mtimeMs: 1605268343610.9622,
+      ctimeMs: 1605268343610.9622,
+      birthtimeMs: 1605268309179.0745,
+      atime: 2020-11-13T11:52:29.127Z,
+      mtime: 2020-11-13T11:52:23.611Z,
+      ctime: 2020-11-13T11:52:23.611Z,
+      birthtime: 2020-11-13T11:51:49.179Z
+    }
+*/
