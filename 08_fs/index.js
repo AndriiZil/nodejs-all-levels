@@ -20,7 +20,8 @@ fs.access(file, fs.constants.W_OK, (err) => {
     console.log(`${file} ${err ? 'is not writable' : 'is writable'}`);
 });
 
-fs.access('apple', function(err) {
+// Check if folder exists
+fs.access('apple', (err) => {
     if (err && err.code === 'ENOENT') {
         console.log('Not exists');
         //Create dir in case not found
