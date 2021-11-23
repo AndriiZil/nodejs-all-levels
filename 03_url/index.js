@@ -37,3 +37,6 @@ console.log(myURL2); /*
       href: 'https://www.integralist.co.uk/posts/cognito/#authentication-vs-authorization'
   }
 */
+
+console.log(new URL('https://www.integralist.co.uk/posts/cognito/#authentication-vs-authorization').origin); // https://www.integralist.co.uk
+

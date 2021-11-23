@@ -1,1 +1,1 @@
-console.log(`Child process ${process.argv[2]} is running`)
+console.log(`Child process ${process.argv[2]} is running`);
