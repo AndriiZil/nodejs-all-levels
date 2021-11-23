@@ -1,4 +1,5 @@
 const { deflate, unzip } = require('zlib');
+const { promisify } = require('util');
 
 const input = '.................................';
 
@@ -22,7 +23,6 @@ unzip(buffer, (err, buffer) => {
 
 // Or, Promisified
 
-const { promisify } = require('util');
 const do_unzip = promisify(unzip);
 
 do_unzip(buffer)
