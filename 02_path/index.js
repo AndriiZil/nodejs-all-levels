@@ -1,10 +1,10 @@
 const path = require('path');
 
-console.log('__filename', __filename); // /home/andrii/Documents/github/nodejs-all-levels/02_path/index.js
+console.log('__filename', __filename); // /home/andrii/Documents/github/nodejs-all-levels/02_path/files.js
 
 console.log('__dirname', __dirname); // /home/andrii/Documents/github/nodejs-all-levels/02_path
 
-console.log('path.basename(__filename)', path.basename(__filename)); // index.js
+console.log('path.basename(__filename)', path.basename(__filename)); // files.js
 
 console.log('path.dirname(__filename)', path.dirname(__filename)); // /home/andrii/Documents/github/nodejs-all-levels/02_path
 
@@ -26,7 +26,7 @@ console.log('path.parse(__filename)', path.parse(__filename)); /*
     {
         root: '/',
         dir: '/home/andrii/Documents/github/nodejs-all-levels/02_path',
-        base: 'index.js',
+        base: 'files.js',
         ext: '.js',
         name: 'index'
      }

@@ -25,7 +25,7 @@ console.timeEnd('100000-elements');
 
 console.trace('Show me here') /*
    Trace: Show me here
-    at Object.<anonymous> (/home/andrii/Documents/github/nodejs-all-levels/07_console/index.js:26:9)
+    at Object.<anonymous> (/home/andrii/Documents/github/nodejs-all-levels/07_console/files.js:26:9)
     at Module._compile (module.js:652:30)
     at Object.Module._extensions..js (module.js:663:10)
     at Module.load (module.js:565:32)

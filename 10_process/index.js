@@ -26,7 +26,7 @@ console.log(process.arch); // x64
 console.log(process.argv); /*
 [
     '/usr/bin/node',
-    '/home/andrii/Documents/github/nodejs-all-levels/10_process/index.js'
+    '/home/andrii/Documents/github/nodejs-all-levels/10_process/files.js'
 ]
 */
 

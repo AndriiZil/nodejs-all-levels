@@ -58,14 +58,14 @@ fs.readdir(__dirname, (err, data) => {
 /*
     [
       'example.txt',
-      'index.js',
+      'files.js',
       'message.txt',
       'node.txt',
       'tmp',
       'watch-dir.js',
       'watch-file.js'
     ]
-* */
+* */sa
 
 // the first argument si path to file or filename if it in the same directory
 fs.readFile(file, 'utf-8', (err, data) => {
