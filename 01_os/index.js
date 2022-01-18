@@ -4,6 +4,38 @@ const os = require('os');
 
 console.log('os.arch()', os.arch()); // x64
 
+console.log('os.cpus()', os.cpus());
+/**
+ * [
+ *   {
+ *     model: 'Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz',
+ *     speed: 3000,
+ *     times: { user: 5835810, nice: 7070, sys: 1633460, idle: 38880830, irq: 0 }
+ *   },
+ *   {
+ *     model: 'Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz',
+ *     speed: 3358,
+ *     times: {
+ *       user: 5437680,
+ *       nice: 10400,
+ *       sys: 2111330,
+ *       idle: 38659860,
+ *       irq: 0
+ *     }
+ *   },
+ *   {
+ *     model: 'Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz',
+ *     speed: 3000,
+ *     times: { user: 5683140, nice: 9500, sys: 1564100, idle: 39140680, irq: 0 }
+ *   },
+ *   {
+ *     model: 'Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz',
+ *     speed: 3000,
+ *     times: { user: 5733020, nice: 9170, sys: 1551340, idle: 39102990, irq: 0 }
+ *   }
+ * ]
+ */
+
 console.log('os.endianness()', os.endianness()); // LE
 
 console.log('os.freemem()', os.freemem()); // 8559562752

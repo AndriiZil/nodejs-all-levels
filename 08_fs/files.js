@@ -1,7 +1,5 @@
 const fs = require('fs');
 
-const { promises: fsPromises } = require('fs'); // promise api
-
 const file = 'example.txt';
 const test = 'test.html';
 
