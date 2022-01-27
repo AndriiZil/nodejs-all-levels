@@ -16,3 +16,11 @@ const promise = new Promise((resolve, reject) => {
 });
 
 f('5'); // 4
+
+/**
+ * 1
+ * 2
+ * 3
+ * 5
+ * 4
+ */

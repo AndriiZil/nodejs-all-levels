@@ -11,7 +11,7 @@ setTimeout(() => {
     process.nextTick(() => console.log('process.nextTick()')); // 5
 }, 0);
 
-setTimeout(() => console.log('timeout:3 0'), 0);
+setTimeout(() => console.log('timeout:3 0'), 0); // 7
 
 console.log('end script'); // 2
 

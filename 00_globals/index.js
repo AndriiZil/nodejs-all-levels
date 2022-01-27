@@ -61,9 +61,11 @@ console.log(process); // ***
 
 setTimeout(() => console.log('TimeOut'), 1000);
 setImmediate(() => console.log('immediate'));
-setInterval(() => console.log('interval'));
+const interval = setInterval(() => console.log('interval'));
 
 console.log(performance);
+
+clearInterval(interval);
 /**
  * Performance {
  *   nodeTiming: PerformanceNodeTiming {

@@ -1,9 +1,7 @@
 console.log('Start script'); // 1
 
 const interval = setInterval(() => {
-
     console.log('setInterval'); // 5 // 9 --- 2 times
-    
 });
 
 setTimeout(() => {

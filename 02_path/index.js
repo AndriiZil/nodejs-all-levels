@@ -31,3 +31,5 @@ console.log('path.parse(__filename)', path.parse(__filename)); /*
         name: 'index'
      }
 */
+
+console.log('path.resolve()', path.resolve()); // path.resolve() /home/andrii/Documents/refresh-js/node-js-all-levels/02_path

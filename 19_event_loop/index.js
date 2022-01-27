@@ -1,20 +1,28 @@
-var a = 5;
+let a = 5;
 
-console.log('start');
+console.log('start'); // 1
 
-setTimeout(function timeout() {
-    console.log(a);
+setTimeout(() => {
+    console.log('A2', a); // 5
     a = 10;
 }, 0);
 
-var p = new Promise(function(resolve, reject) {
-    console.log(a);
+const p = new Promise((resolve, reject) => {
+    console.log('A1', a); // 2
     a = 25;
     resolve();
 });
 
-p.then(function(){
-    // some code
+p.then(() => {
+    console.log('text'); // 4
 });
 
-console.log('end');
+console.log('end'); // 3
+/**
+ * start
+ * A1 5
+ * end
+ * text
+ * setTimeout
+ * A2 25
+ */
