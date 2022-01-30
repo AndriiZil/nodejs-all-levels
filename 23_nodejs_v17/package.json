@@ -1,0 +1,13 @@
+{
+  "name": "23_nodejs_v17",
+  "version": "1.0.0",
+  "description": "* OpenSSL 3.0 support * V8 JavaScript engine is updated to V8 9.5 * Readline Promise API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
