@@ -30,7 +30,7 @@ console.log(Buffer.alloc(10)); // <Buffer 00 00 00 00 00 00 00 00 00 00>
 
 console.log(__dirname); // /home/andrii/Documents/refresh-js/node-js-all-levels/00_globals
 
-console.log(__filename); // /home/andrii/Documents/refresh-js/node-js-all-levels/00_globals/index.js
+console.log(__filename); // /home/andrii/Documents/refresh-js/node-js-all-levels/00_globals/01_unhandled_rejections.js
 
 console.log(exports);
 
@@ -40,7 +40,7 @@ console.log(module);
  *   id: '.',
  *   path: '/home/andrii/Documents/refresh-js/node-js-all-levels/00_globals',
  *   exports: {},
- *   filename: '/home/andrii/Documents/refresh-js/node-js-all-levels/00_globals/index.js',
+ *   filename: '/home/andrii/Documents/refresh-js/node-js-all-levels/00_globals/01_unhandled_rejections.js',
  *   loaded: false,
  *   children: [],
  *   paths: [
