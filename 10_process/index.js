@@ -1,4 +1,8 @@
+const { version } = require('process');
+
 console.log('start');
+
+console.log(`Version: ${version}`); // Version: v16.14.0
 
 console.log(process.versions);
 /*

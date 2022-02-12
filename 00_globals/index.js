@@ -1,4 +1,4 @@
-console.log(console);
+console.log('console', console);
 /**
  * log: [Function: log],
  *   warn: [Function: warn],
@@ -28,13 +28,13 @@ console.log(console);
 
 console.log(Buffer.alloc(10)); // <Buffer 00 00 00 00 00 00 00 00 00 00>
 
-console.log(__dirname); // /home/andrii/Documents/refresh-js/node-js-all-levels/00_globals
+console.log('__dirname', __dirname); // /home/andrii/Documents/refresh-js/node-js-all-levels/00_globals
 
-console.log(__filename); // /home/andrii/Documents/refresh-js/node-js-all-levels/00_globals/01_unhandled_rejections.js
+console.log('__filename', __filename); // /home/andrii/Documents/refresh-js/node-js-all-levels/00_globals/01_unhandled_rejections.js
 
-console.log(exports);
+console.log('exports', exports); // {}
 
-console.log(module);
+console.log('module', module);
 /**
  * Module {
  *   id: '.',
@@ -63,25 +63,24 @@ setTimeout(() => console.log('TimeOut'), 1000);
 setImmediate(() => console.log('immediate'));
 const interval = setInterval(() => console.log('interval'));
 
-console.log(performance);
-
-clearInterval(interval);
+console.log('performance', performance);
 /**
- * Performance {
+ *  performance Performance {
  *   nodeTiming: PerformanceNodeTiming {
  *     name: 'node',
  *     entryType: 'node',
  *     startTime: 0,
- *     duration: 34.9350949972868,
- *     nodeStart: 0.12590599805116653,
- *     v8Start: 0.8794549964368343,
- *     bootstrapComplete: 21.13347899913788,
- *     environment: 11.252829998731613,
+ *     duration: 34.60271000023931,
+ *     nodeStart: 0.13702800031751394,
+ *     v8Start: 0.8627310004085302,
+ *     bootstrapComplete: 21.309073000214994,
+ *     environment: 11.460630999878049,
  *     loopStart: -1,
  *     loopExit: -1,
  *     idleTime: 0
  *   },
- *   timeOrigin: 1639317607608.641
+ *   timeOrigin: 1644651082222.904
  * }
- *
  */
+
+clearInterval(interval);

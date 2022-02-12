@@ -87,6 +87,10 @@ console.log('os.totalmem()', os.totalmem()); // 16734515200
 
 console.log('os.type()', os.type()); // Linux
 
+console.log('os.uptime()', os.uptime()); // 7915.57
+
+console.log('os.version()', os.version()); // #31~20.04.1-Ubuntu SMP Wed Jan 19 14:08:10 UTC 2022
+
 console.log('os.userInfo()', os.userInfo());  /*
     {
         uid: 1000,

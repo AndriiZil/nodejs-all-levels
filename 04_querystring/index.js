@@ -1,10 +1,7 @@
-const url = require('url');
 const querystring = require('querystring');
 
-const parsedUrl = url.parse('http://www.google.com/?page=3&limit=10&category=nodejs&category=javascript');
+console.log(querystring.parse('foo=bar&abc=xyz&abc=123')); // { foo: 'bar', abc: [ 'xyz', '123' ] }
 
-const query = querystring.parse(parsedUrl.query);
+console.log(querystring.stringify({foo: 'bar', baz: ['qux', 'quux'], corge: ''})); // foo=bar&baz=qux&baz=quux&corge=
 
-console.log(JSON.stringify(query)); // {"page":"3","limit":"10","category":["nodejs","javascript"]}
-
-console.log(querystring.stringify(query)); // page=3&limit=10&category=nodejs&category=javascript
+console.log(querystring.stringify({foo: 'bar', baz: 'qux'}, ';', ':')); // foo:bar;baz:qux

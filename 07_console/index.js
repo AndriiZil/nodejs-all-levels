@@ -46,3 +46,8 @@ console.groupEnd();
 console.log("Back to level 2");
 console.groupEnd();
 console.log("Back to the outer level");
+
+// ------------------------------------------
+
+const code = 5;
+console.error('error #%d', code); // error #5
