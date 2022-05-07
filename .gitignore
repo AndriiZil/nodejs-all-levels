@@ -1,5 +1,6 @@
 .idea
 node_modules
+*/node_modules
 socket/simple-socket/node_modules
 socket/namespaces/node_modules
 13_worker-threads/node_modules

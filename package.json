@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-all-levels",
+  "version": "1.0.0",
+  "description": "* This repository is for everyone who loves nodejs and don't know about it's features. 1. RegExp Match Indices. 2. Timers Promises API (Stable) This feature was available in NodeJS 15 as experimental. It’s been moved to stable in NodeJS 16. 3. AbortController (Web API). 4. Atob and btoa for your base64 5. Web Crypto API (Experimental)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndriiZil/nodejs-all-levels.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndriiZil/nodejs-all-levels/issues"
+  },
+  "homepage": "https://github.com/AndriiZil/nodejs-all-levels#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "type": "module"
+}
