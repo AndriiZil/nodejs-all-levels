@@ -26,6 +26,9 @@ console.log('console', console);
  *   context: [Function: context]
  */
 
+const ac = new AbortController();
+console.log({ ac }); // { ac: AbortController { signal: AbortSignal { aborted: false } } }
+
 console.log(Buffer.alloc(10)); // <Buffer 00 00 00 00 00 00 00 00 00 00>
 
 console.log('__dirname', __dirname); // /home/andrii/Documents/refresh-js/node-js-all-levels/00_globals
@@ -36,26 +39,33 @@ console.log('exports', exports); // {}
 
 console.log('module', module);
 /**
- * Module {
+ * module {
  *   id: '.',
- *   path: '/home/andrii/Documents/refresh-js/node-js-all-levels/00_globals',
+ *   path: '/Users/adnriizilnyk/Documents/github-learning/nodejs-all-levels/00_globals',
  *   exports: {},
- *   filename: '/home/andrii/Documents/refresh-js/node-js-all-levels/00_globals/01_unhandled_rejections.js',
+ *   filename: '/Users/adnriizilnyk/Documents/github-learning/nodejs-all-levels/00_globals/index.js',
  *   loaded: false,
  *   children: [],
  *   paths: [
- *     '/home/andrii/Documents/refresh-js/node-js-all-levels/00_globals/node_modules',
- *     '/home/andrii/Documents/refresh-js/node-js-all-levels/node_modules',
- *     '/home/andrii/Documents/refresh-js/node_modules',
- *     '/home/andrii/Documents/node_modules',
- *     '/home/andrii/node_modules',
- *     '/home/node_modules',
+ *     '/Users/adnriizilnyk/Documents/github-learning/nodejs-all-levels/00_globals/node_modules',
+ *     '/Users/adnriizilnyk/Documents/github-learning/nodejs-all-levels/node_modules',
+ *     '/Users/adnriizilnyk/Documents/github-learning/node_modules',
+ *     '/Users/adnriizilnyk/Documents/node_modules',
+ *     '/Users/adnriizilnyk/node_modules',
+ *     '/Users/node_modules',
  *     '/node_modules'
  *   ]
  * }
  */
 
-console.log(URL); // [class URL]
+console.log(URL);
+/**
+ * [class URL] {
+ *   canParse: [Function: canParse],
+ *   createObjectURL: [Function: createObjectURL],
+ *   revokeObjectURL: [Function: revokeObjectURL]
+ * }
+ */
 
 console.log(process); // ***
 
