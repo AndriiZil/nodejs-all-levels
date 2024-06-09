@@ -4,11 +4,7 @@
   "description": "* This repository is for everyone who loves nodejs and don't know about it's features. 1. RegExp Match Indices. 2. Timers Promises API (Stable) This feature was available in NodeJS 15 as experimental. It’s been moved to stable in NodeJS 16. 3. AbortController (Web API). 4. Atob and btoa for your base64 5. Web Crypto API (Experimental)",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "start": "node 22_nodejs_v16/server.js"
-=======
     "dev": "nodemon index.js"
->>>>>>> 535e01e (added readme files)
   },
   "repository": {
     "type": "git",
@@ -22,14 +18,10 @@
   },
   "homepage": "https://github.com/AndriiZil/nodejs-all-levels#readme",
   "dependencies": {
-<<<<<<< HEAD
     "axios": "1.7.2",
-    "express": "4.18.1"
-=======
     "express": "4.18.1"
   },
   "devDependencies": {
     "nodemon": "3.1.3"
->>>>>>> 535e01e (added readme files)
   }
 }
