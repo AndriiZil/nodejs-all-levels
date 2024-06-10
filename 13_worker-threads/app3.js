@@ -1,5 +1,5 @@
 const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');
-const request = require("request");
+const request = require('request');
 
 function startWorker(path, cb) {
     let w = new Worker(path, { workerData: null });
@@ -27,10 +27,11 @@ let myWorker = startWorker(__dirname + '/workerCode.js', (err, result) => {
 })
 
 const start = Date.now();
+
 request.get('http://www.google.com', (err, resp) => {
     if(err) {
         return console.error(err);
     }
     console.log('Total bytes received:', resp.body.length);
-    myWorker.postMessage({ finished: true, timeDiff: Date.now() - start }) //так можно отправлять сообщения воркеру
+    myWorker.postMessage({ finished: true, timeDiff: Date.now() - start });
 })

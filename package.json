@@ -19,7 +19,8 @@
   "homepage": "https://github.com/AndriiZil/nodejs-all-levels#readme",
   "dependencies": {
     "axios": "1.7.2",
-    "express": "4.18.1"
+    "express": "4.18.1",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "nodemon": "3.1.3"

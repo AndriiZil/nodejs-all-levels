@@ -6,7 +6,7 @@ if (isMainThread) {
 
     let w = new Worker(__filename, { workerData: null });
 
-    w.on('message', (msg) => { //Сообщение от воркера!
+    w.on('message', (msg) => {
         console.log('First value is:', msg.val);
         console.log('Took:', (msg.timeDiff / 1000), 'seconds');
     });
@@ -30,7 +30,7 @@ if (isMainThread) {
         return Math.random() * (max - min) + min
     }
 
-    const sorter = require("./list-sorter");
+    const sorter = require('./list-sorter');
 
     const start = Date.now()
     let bigList = Array(1000000).fill().map( (_) => random(1, 10000))

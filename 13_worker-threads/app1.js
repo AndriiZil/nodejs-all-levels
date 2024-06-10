@@ -10,7 +10,7 @@ function counter(id, i){
 
 if (isMainThread) {
     console.log('this is the main thread')
-    for(let i = 0; i < 2; i++) {
+    for (let i = 0; i < 2; i++) {
         new Worker(__filename, { workerData: i });
     }
 
