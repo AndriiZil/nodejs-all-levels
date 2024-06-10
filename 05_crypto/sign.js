@@ -1,8 +1,10 @@
+'use strict';
+
 const {
   generateKeyPairSync,
   createSign,
   createVerify
-} = require('crypto');
+} = require('node:crypto');
 
 const { privateKey, publicKey } = generateKeyPairSync('ec', {
   namedCurve: 'sect239k1'

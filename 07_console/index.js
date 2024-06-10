@@ -1,3 +1,5 @@
+'use strict';
+
 console.count('default') // default: 1
 console.count('default') // default: 2
 console.count('default') // default: 3

@@ -1,8 +1,10 @@
+'use strict';
+
 const { Buffer } = require('buffer');
 const {
   scryptSync,
   createDecipheriv
-} = require('crypto');
+} = require('node:crypto');
 
 const algorithm = 'aes-192-cbc';
 const password = 'Password used to generate key';
@@ -19,4 +21,4 @@ const encrypted =
 let decrypted = decipher.update(encrypted, 'hex', 'utf8');
 decrypted += decipher.final('utf8');
 
-console.log(decrypted);
+console.log({ decrypted }); // { decrypted: 'some clear text data' }

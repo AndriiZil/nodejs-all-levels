@@ -1,4 +1,6 @@
-const crypto = require('crypto');
+'use strict';
+
+const crypto = require('node:crypto');
 
 // alhoritms: md5, sha1, sha256, sha512 are available
 const string = 'password';

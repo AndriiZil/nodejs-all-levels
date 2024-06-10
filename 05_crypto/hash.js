@@ -1,6 +1,8 @@
+'use strict';
+
 const {
   createHash
-} = require('crypto');
+} = require('node:crypto');
 
 const hash1 = createHash('sha256');
 
@@ -19,7 +21,7 @@ hash1.end();
 // ---------------------------------------------------------------
 
 const { createReadStream } = require('fs');
-const { stdout } = require('process');
+const { stdout } = require('node:process');
 
 const hash = createHash('sha256');
 

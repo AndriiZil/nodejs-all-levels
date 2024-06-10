@@ -1,4 +1,6 @@
-const url = require('url');
+'use strict';
+
+const url = require('node:url');
 
 const myURL =
     url.parse('https://user:pass@sub.example.com:8080/p/a/t/h?query=string#hash');

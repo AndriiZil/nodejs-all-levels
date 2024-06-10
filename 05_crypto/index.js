@@ -1,9 +1,11 @@
+'use strict';
+
 const {
   createHmac,
   scrypt,
   randomFill,
   createCipheriv
-} = require('crypto');
+} = require('node:crypto');
 
 const secret = 'abcdefg';
 const hash = createHmac('sha256', secret)
@@ -16,6 +18,7 @@ console.log('HASH', hash); // c0fa1bc00531bd78ef38c628449c5102aeabd49b5dc3a2a516
 
 const algorithm = 'aes-192-cbc';
 const password = 'Password used to generate key';
+
 scrypt(password, 'salt', 24, (err, key) => {
   if (err) throw err;
   // Then, we'll generate a random initialization vector

@@ -1,4 +1,6 @@
-const querystring = require('querystring');
+'use strict';
+
+const querystring = require('node:querystring');
 
 console.log(querystring.parse('foo=bar&abc=xyz&abc=123')); // { foo: 'bar', abc: [ 'xyz', '123' ] }
 

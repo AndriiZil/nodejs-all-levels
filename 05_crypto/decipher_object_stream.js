@@ -1,14 +1,17 @@
+'use strict';
+
 const { Buffer } = require('buffer');
 const {
   scryptSync,
   createDecipheriv
-} = require('crypto');
+} = require('node:crypto');
 
 const algorithm = 'aes-192-cbc';
 const password = 'Password used to generate key';
 // Key length is dependent on the algorithm. In this case for aes192, it is
 // 24 bytes (192 bits).
 // Use the async `crypto.scrypt()` instead.
+
 const key = scryptSync(password, 'salt', 24);
 // The IV is usually passed along with the ciphertext.
 const iv = Buffer.alloc(16, 0); // Initialization vector.
@@ -23,7 +26,7 @@ decipher.on('readable', () => {
   }
 });
 decipher.on('end', () => {
-  console.log('Decrypted', decrypted);
+  console.log('Decrypted::', decrypted);
   // Prints: some clear text data
 });
 
