@@ -1,11 +1,11 @@
 'use strict';
 
-import express from 'express';
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url';
+const express = require('express');
+const path = require('path');
+const { fileURLToPath } = require('url');
 
 const app = express();
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, '../build')));
 
 app.get('/*', (req, res) => {
