@@ -3,4 +3,4 @@ const regex = /(foo)(bar)/d;
 
 const result = regex.exec(myString);
 
-console.log(result.indices)
+console.log(result.indices);

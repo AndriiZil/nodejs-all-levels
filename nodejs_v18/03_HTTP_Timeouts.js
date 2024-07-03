@@ -9,8 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, '../build')));
 
 app.get('/*', (req, res) => {
-  setTimeout(() =>
-    res.sendFile(path.join(__dirname, '../build', 'index.html')), 1000);
+  setTimeout(() => res.sendFile(path.join(__dirname, '../build', 'index.html')), 1000);
 });
 
 const server = app.listen(8080);

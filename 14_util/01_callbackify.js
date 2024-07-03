@@ -7,7 +7,7 @@ async function fn() {
 }
 const callbackFunction = util.callbackify(fn);
 
-callbackFunction((err, ret) => {
+callbackFunction((err, data) => {
   if (err) throw err;
-  console.log('MESSAGE:', ret); // MESSAGE: hello world
+  console.log('MESSAGE:', data); // MESSAGE: hello world
 });

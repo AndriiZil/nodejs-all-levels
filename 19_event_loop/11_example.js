@@ -1,14 +1,14 @@
 setTimeout(function timeout() {
-    console.log('Таймаут');
+  console.log('Таймаут');
 }, 0);
 
-let p = new Promise(function(resolve, reject) {
-    console.log('Создание промиса');
-    resolve();
+let p = new Promise(function (resolve, reject) {
+  console.log('Создание промиса');
+  resolve();
 });
 
-p.then(function(){
-    console.log('Обработка промиса');
+p.then(function () {
+  console.log('Обработка промиса');
 });
 
 console.log('Конец скрипта');

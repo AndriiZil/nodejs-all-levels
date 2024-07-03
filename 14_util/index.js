@@ -1,7 +1,9 @@
-const util = require('util');
-const EventEmitter = require('events');
-const { inspect } = require('util');
-const fs = require('fs');
+'use strict';
+
+const util = require('node:util');
+const EventEmitter = require('node:events');
+const { inspect } = require('node:util');
+const fs = require('node:fs');
 
 async function fn() {
     return 'hello world';
@@ -66,10 +68,10 @@ const stat = util.promisify(fs.stat);
 
 async function callStat() {
     const stats = await stat('.');
-    console.log(`This directory is owned by ${stats.uid}`);
+    console.log(`This directory is owned by: ${stats.uid}`);
 }
 
-callStat() // This directory is owned by 1000
+callStat() // This directory is owned by 501
 
 // ===================================================================================
 

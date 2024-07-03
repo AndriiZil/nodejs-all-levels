@@ -1,6 +1,6 @@
 'use strict';
 
-const inputArray = [{v:1}, {v:2}, {v:3}, {v:4}, {v:5}];
+const inputArray = [{ v: 1 }, { v: 2 }, { v: 3 }, { v: 4 }, { v: 5 }];
 
 console.log(inputArray.find((element) => element.v % 2 === 0)); // { v: 2 }
 console.log(inputArray.find((element) => element.v % 7 === 0)); // undefined

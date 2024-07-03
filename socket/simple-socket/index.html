@@ -1,45 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Socket.io example</title>
     <script src="./node_modules/socket.io-client/dist/socket.io.min.js"></script>
     <script>
-        let socket = io()
+      let socket = io();
 
-        socket.on('connect-client', message => console.log(message));
+      socket.on('connect-client', (message) => console.log(message));
 
-        socket.on('message', (message) => console.log('Message from server: ', message))
-        socket.on('private message', (message) =>
-            console.log(
-                'Private message from server: ',
-                message
-            )
-        )
+      socket.on('message', (message) => console.log('Message from server: ', message));
+      socket.on('private message', (message) => console.log('Private message from server: ', message));
 
-        socket.on('newUser', message => console.log(message));
+      socket.on('newUser', (message) => console.log(message));
 
-        socket.on('error', message => console.log(message));
-        socket.on('success', message => console.log(message));
+      socket.on('error', (message) => console.log(message));
+      socket.on('success', (message) => console.log(message));
 
-        socket.on('user left', (message) => console.log(message));
+      socket.on('user left', (message) => console.log(message));
 
-        function sendMessageToServer() {
-            socket.emit('message', "I'm client")
-        }
+      function sendMessageToServer() {
+        socket.emit('message', "I'm client");
+      }
 
-        function sendMessageToRoom() {
-            socket.emit('joinRoom', 'css');
-        }
+      function sendMessageToRoom() {
+        socket.emit('joinRoom', 'css');
+      }
     </script>
-</head>
-<body>
-    <button onclick="sendMessageToServer()">
-        Send message to server
-    </button>
-    <hr>
-    <button onclick="sendMessageToRoom()">
-        Send message to room
-    </button>
-</body>
+  </head>
+  <body>
+    <button onclick="sendMessageToServer()">Send message to server</button>
+    <hr />
+    <button onclick="sendMessageToRoom()">Send message to room</button>
+  </body>
 </html>

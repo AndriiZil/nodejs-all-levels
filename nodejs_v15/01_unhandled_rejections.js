@@ -5,8 +5,8 @@ function myPromise() {
         reject({
           error: 'The call is rejected with an error',
         }),
-      1000
-    )
+      1000,
+    ),
   ).then((data) => console.log(data.data));
 }
 

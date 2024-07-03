@@ -9,7 +9,7 @@ function MyStream() {
 
 util.inherits(MyStream, EventEmitter);
 
-MyStream.prototype.write = function(data) {
+MyStream.prototype.write = function (data) {
   this.emit('data', data);
 };
 

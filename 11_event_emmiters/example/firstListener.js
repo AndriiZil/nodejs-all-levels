@@ -8,8 +8,8 @@ ticketManager.on('buy', (email, price, date) => {
   console.log('Someone bought a ticket');
 });
 
-ticketManager.once("buy", () => {
-  console.log("This is only called once");
+ticketManager.once('buy', () => {
+  console.log('This is only called once');
 });
 
 ticketManager.buy('test@gmail.com', 20);

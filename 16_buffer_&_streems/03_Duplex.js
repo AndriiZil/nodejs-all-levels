@@ -1,15 +1,14 @@
-const fs = require('fs');
+'use strict';
+
+const fs = require('node:fs');
 
 const readStream = fs.createReadStream('./doc/file1.txt');
 const writeStream = fs.createWriteStream('./doc/new-file.txt');
 
 const handleError = () => {
-    console.log('Error');
-    readStream.destroy();
-    writeStream.end('Finished with error...');
-}
+  console.log('Error');
+  readStream.destroy();
+  writeStream.end('Finished with error...');
+};
 
-readStream
-    .on('error', handleError)
-    .pipe(writeStream)
-    .on('error', handleError);
+readStream.on('error', handleError).pipe(writeStream).on('error', handleError);

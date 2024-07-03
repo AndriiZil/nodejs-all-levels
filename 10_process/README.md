@@ -3,5 +3,5 @@
 - `hrtime()`
 - `cpuUsage()`
 - `unhandledRejection`, `uncaughtException`, `rejectionHandled`
-- `SIGINT`, `SIGTERM`, 
+- `SIGINT`, `SIGTERM`,
 - `beforeExit`, `exit`, `warning`

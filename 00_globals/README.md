@@ -2,7 +2,7 @@
 
 - console
 - Buffer
-- __dirname, __filename
+- **dirname, **filename
 - exports, module
 - URL
 - process, setTimeout, setImmediate, setInterval

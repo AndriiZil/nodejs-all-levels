@@ -3,7 +3,7 @@ function promiseReject(delay) {
     setTimeout(() => {
       reject({
         error: `Error from promise about ${delay} delay`,
-      })
+      });
     }, delay);
   });
 }
@@ -13,7 +13,7 @@ function promiseSuccess(delay) {
     setTimeout(() => {
       resolve({
         result: `Success from promise about ${delay} delay`,
-      })
+      });
     }, delay);
   });
 }

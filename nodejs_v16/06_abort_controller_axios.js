@@ -4,7 +4,7 @@ const signal = AbortSignal.timeout(1500); // Abort operation after 1.5 sec
 
 const fetch = async () => {
   try {
-    const {  data  } = await axios.get('http://localhost:3000', { signal });
+    const { data } = await axios.get('http://localhost:3000', { signal });
 
     return data;
   } catch (error) {

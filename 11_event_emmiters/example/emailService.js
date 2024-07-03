@@ -6,4 +6,4 @@ class EmailService {
   }
 }
 
-module.exports = EmailService
+module.exports = EmailService;

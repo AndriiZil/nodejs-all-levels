@@ -1,23 +1,24 @@
 console.log(1); // 1
 
 setTimeout(() => {
-    console.log('setTimeout 3000'); // 5
+  console.log('setTimeout 3000'); // 5
 }, 3000);
 
 setTimeout(() => {
-    console.log('setTimeout 1500'); // 4
+  console.log('setTimeout 1500'); // 4
 }, 1500);
 
 setTimeout(() => {
-    console.log('setTimeout 0');
+  console.log('setTimeout 0');
 }, 0);
 
-for (const value of ['A', 'B']) { // 2
-    console.log(value);
+for (const value of ['A', 'B']) {
+  // 2
+  console.log(value);
 }
 
 function two() {
-    console.log(2); // 3
+  console.log(2); // 3
 }
 
 two();

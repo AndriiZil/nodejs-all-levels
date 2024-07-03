@@ -43,7 +43,7 @@ console.log('module', module);
  *   id: '.',
  *   path: '/Users/adnriizilnyk/Documents/github-learning/nodejs-all-levels/00_globals',
  *   exports: {},
- *   filename: '/Users/adnriizilnyk/Documents/github-learning/nodejs-all-levels/00_globals/index.js',
+ *   filename: '/Users/adnriizilnyk/Documents/github-learning/nodejs-all-levels/00_globals/01_diagnostics_channel.js',
  *   loaded: false,
  *   children: [],
  *   paths: [

@@ -1,8 +1,6 @@
 'use strict';
 
-const {
-  createHash
-} = require('node:crypto');
+const { createHash } = require('node:crypto');
 
 const hash1 = createHash('sha256');
 

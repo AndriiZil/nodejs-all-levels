@@ -1,10 +1,12 @@
-const { createGzip } = require('zlib');
-const { pipeline } = require('stream');
+'use strict';
+
+const { createGzip } = require('node:zlib');
+const { pipeline } = require('node:stream');
 
 const {
     createReadStream,
     createWriteStream
-} = require('fs');
+} = require('node:fs');
 
 const gzip = createGzip();
 const source = createReadStream('input.txt');

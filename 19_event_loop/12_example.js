@@ -1,19 +1,18 @@
-(function async () {
-    try {
-        console.log('start');
+(function async() {
+  try {
+    console.log('start');
 
-        Promise.resolve('success')
-            .then(console.log)
+    Promise.resolve('success').then(console.log);
 
-        setImmediate(() => console.log('setImmediate'));
+    setImmediate(() => console.log('setImmediate'));
 
-        setTimeout(() => console.log('setTimeout'), 0);
+    setTimeout(() => console.log('setTimeout'), 0);
 
-        console.log('end');
-    } catch (err) {
-        console.log(err);
-    }
-})()
+    console.log('end');
+  } catch (err) {
+    console.log(err);
+  }
+})();
 
 /**
  * start

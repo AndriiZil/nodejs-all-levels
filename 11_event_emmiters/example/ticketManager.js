@@ -1,6 +1,6 @@
 'use strict';
 
-const { EventEmitter } = require('events');
+const { EventEmitter } = require('node:events');
 
 class TicketManager extends EventEmitter {
   constructor(supply) {
@@ -15,7 +15,7 @@ class TicketManager extends EventEmitter {
       return;
     }
 
-    this.emit("error", new Error("There are no more tickets left to purchase"));
+    this.emit('error', new Error('There are no more tickets left to purchase'));
   }
 }
 
