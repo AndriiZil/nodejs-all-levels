@@ -45,6 +45,10 @@
 
 ### Question preparation
 
+### NodeJS Common things
+
+- [NodeJS Common things](common_things/README.md)
+
 - [Top Node.js Interview Questions and Answers in 2024](https://www.geeksforgeeks.org/node-interview-questions-and-answers)
 - [Top 100 Node.js interview questions and answers in 2024](https://www.turing.com/interview-questions/node-js)
 - [Top 50 NodeJS Interview Questions and Answers for 2024](https://javascriptcentric.medium.com/top-50-nodejs-interview-questions-and-answers-for-2024-5e460dac7852)
