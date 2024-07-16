@@ -1,7 +1,7 @@
 'use strict';
 
-const http = require('http');
-const { fork } = require('child_process');
+const http = require('node:http');
+const { fork } = require('node:child_process');
 
 const server = http.createServer();
 
