@@ -1,3 +1,5 @@
+'use strict';
+
 let bar;
 
 function someAsyncApiCall(callback) {
@@ -5,7 +7,11 @@ function someAsyncApiCall(callback) {
 }
 
 someAsyncApiCall(() => {
-  console.log('bar', bar); // 1
+  console.log('bar', bar);
 });
 
-bar = 1;
+bar = 5;
+
+/**
+ * bar 5
+ */

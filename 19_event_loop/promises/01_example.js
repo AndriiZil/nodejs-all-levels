@@ -1,3 +1,5 @@
+'use strict';
+
 const f = (a) => console.log(a);
 
 f('1'); // 1
