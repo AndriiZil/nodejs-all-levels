@@ -13,33 +13,29 @@ const usersNamespace = io.of('/users');
 const ordersNameSpace = io.of('/orders');
 
 usersNamespace.on('connection', (socket) => {
-    console.log(`Client ${socket.id} connected to /users`);
+  console.log(`Client ${socket.id} connected to /users`);
 
-    socket.on('message', (msg) => {
-        console.log(`Message from the client: ${msg}`);
-    });
+  socket.on('message', (msg) => {
+    console.log(`Message from the client: ${msg}`);
+  });
 
-    socket.emit('message', 'Message to the room /users');
+  socket.emit('message', 'Message to the room /users');
 
-    socket.on('disconnect', () => {
-        console.log(`Client with id ${socket.id} disconnected`)
-    })
+  socket.on('disconnect', () => {
+    console.log(`Client with id ${socket.id} disconnected`);
+  });
 });
 
 ordersNameSpace.on('connection', (socket) => {
-    console.log(
-        `Client ${socket.id} connected to /orders`
-    )
+  console.log(`Client ${socket.id} connected to /orders`);
 
-    socket.on('disconnect', () => {
-        console.log(`Client with id ${socket.id} disconnected`)
-    })
+  socket.on('disconnect', () => {
+    console.log(`Client with id ${socket.id} disconnected`);
+  });
 });
 
 app.use(express.static(__dirname));
 
-app.get('/', (req, res) => res.sendFile('index.html'))
+app.get('/', (req, res) => res.sendFile('index.html'));
 
-server.listen(port, host, () =>
-    console.log(`Server listens http://${host}:${port}`)
-);
+server.listen(port, host, () => console.log(`Server listens http://${host}:${port}`));

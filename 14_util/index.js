@@ -6,13 +6,13 @@ const { inspect } = require('node:util');
 const fs = require('node:fs');
 
 async function fn() {
-    return 'hello world';
+  return 'hello world';
 }
 const callbackFunction = util.callbackify(fn);
 
 callbackFunction((err, ret) => {
-    if (err) throw err;
-    console.log(ret);
+  if (err) throw err;
+  console.log(ret);
 });
 
 console.log(util.format('%s:%s', 'foo', 'bar', 'baz'));
@@ -22,13 +22,13 @@ console.log(util.formatWithOptions({ colors: true }, 'See object %O', { foo: 42 
 // ============================================================================================================
 
 function MyStream() {
-    EventEmitter.call(this);
+  EventEmitter.call(this);
 }
 
 util.inherits(MyStream, EventEmitter);
 
-MyStream.prototype.write = function(data) {
-    this.emit('data', data);
+MyStream.prototype.write = function (data) {
+  this.emit('data', data);
 };
 
 const stream = new MyStream();
@@ -37,7 +37,7 @@ console.log(stream instanceof EventEmitter); // true
 console.log(MyStream.super_ === EventEmitter); // true
 
 stream.on('data', (data) => {
-    console.log(`Received data: "${data}"`);
+  console.log(`Received data: "${data}"`);
 });
 stream.write('It works!'); // Received data: "It works!"
 
@@ -67,32 +67,36 @@ console.log(inspect(weakSet, { showHidden: true })); // WeakSet { { a: 1 }, { b:
 const stat = util.promisify(fs.stat);
 
 async function callStat() {
-    const stats = await stat('.');
-    console.log(`This directory is owned by: ${stats.uid}`);
+  const stats = await stat('.');
+  console.log(`This directory is owned by: ${stats.uid}`);
 }
 
-callStat() // This directory is owned by 501
+callStat(); // This directory is owned by 501
 
 // ===================================================================================
 
-console.log('isAnyArrayBuffer', util.types.isAnyArrayBuffer(new ArrayBuffer()));  // Returns true
-console.log('isAnyArrayBuffer', util.types.isAnyArrayBuffer(new SharedArrayBuffer()));  // Returns true
+console.log('isAnyArrayBuffer', util.types.isAnyArrayBuffer(new ArrayBuffer())); // Returns true
+console.log('isAnyArrayBuffer', util.types.isAnyArrayBuffer(new SharedArrayBuffer())); // Returns true
 console.log('isArrayBufferView', util.types.isArrayBufferView(Buffer.from('hello world'))); // true
 console.log('isArrayBuffer', util.types.isArrayBuffer(new ArrayBuffer())); // Returns true
-console.log('isAsyncFunction', util.types.isAsyncFunction(async function foo() {
-}));  // Returns true
+console.log(
+  'isAsyncFunction',
+  util.types.isAsyncFunction(async function foo() {}),
+); // Returns true
 console.log('isBooleanObject', util.types.isBooleanObject(new Boolean(false))); // Returns true
-console.log('isBooleanObject', util.types.isBooleanObject(new Boolean(true)));  // Returns true
-console.log('isDate', util.types.isDate(new Date()));  // Returns true
-console.log('isGeneratorFunction', util.types.isGeneratorFunction(function* foo() {
-}));  // Returns true
-console.log('isMap', util.types.isMap(new Map()));  // Returns true
-console.log('isPromise', util.types.isPromise(Promise.resolve(42)));  // Returns true
+console.log('isBooleanObject', util.types.isBooleanObject(new Boolean(true))); // Returns true
+console.log('isDate', util.types.isDate(new Date())); // Returns true
+console.log(
+  'isGeneratorFunction',
+  util.types.isGeneratorFunction(function* foo() {}),
+); // Returns true
+console.log('isMap', util.types.isMap(new Map())); // Returns true
+console.log('isPromise', util.types.isPromise(Promise.resolve(42))); // Returns true
 const target = {};
 const proxy = new Proxy(target, {});
-console.log('isProxy', util.types.isProxy(proxy));  // Returns true
-console.log('isRegExp', util.types.isRegExp(new RegExp('abc')));  // Returns true
-console.log('isSet', util.types.isSet(new Set()));  // Returns true
-console.log('isWeakMap', util.types.isWeakMap(new WeakMap()));  // Returns true
-console.log('isWeakSet', util.types.isWeakSet(new WeakSet()));  // Returns true
-console.log('isNativeError', util.types.isNativeError(new Error()));  // Returns true
+console.log('isProxy', util.types.isProxy(proxy)); // Returns true
+console.log('isRegExp', util.types.isRegExp(new RegExp('abc'))); // Returns true
+console.log('isSet', util.types.isSet(new Set())); // Returns true
+console.log('isWeakMap', util.types.isWeakMap(new WeakMap())); // Returns true
+console.log('isWeakSet', util.types.isWeakSet(new WeakSet())); // Returns true
+console.log('isNativeError', util.types.isNativeError(new Error())); // Returns true

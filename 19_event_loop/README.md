@@ -1,4 +1,6 @@
-### Phases Overview
+# Event Loop
+
+## Phases Overview
 
 - Event loop phases:
 
@@ -83,3 +85,27 @@
 
   And then Idle… Micro-Queue … Poll … Micro-Queue … Check … Micro-Queue … Close CallBacks and then it starts over.
 ```
+
+## Don't Block the Event Loop (or the Worker Pool)
+
+### Blocking the Event Loop: Node.js core modules
+
+- In a server, you should not use the following synchronous APIs from these modules:
+
+Encryption:
+`crypto.randomBytes` (synchronous version)
+`crypto.randomFillSync`
+`crypto.pbkdf2Sync`
+You should also be careful about providing large input to the encryption and decryption routines.
+Compression:
+`zlib.inflateSync`
+`zlib.deflateSync`
+File system:
+Do not use the synchronous file system APIs. For example, if the file you access is in a distributed file system like NFS, access times can vary widely.
+Child process:
+`child_process.spawnSync`
+`child_process.execSync`
+`child_process.execFileSync`
+
+- `JSON.parse` and `JSON.stringify` are other potentially expensive operations. While these are O(n) in the length of the input,
+  for large n they can take surprisingly long.

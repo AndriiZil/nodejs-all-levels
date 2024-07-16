@@ -1,6 +1,6 @@
 # NodeJS All Levels
 
-- This repository is for everyone who loves nodejs and don't know about it's features.
+- Node.js uses the `Event-Driven Architecture`: it has an Event Loop for orchestration and a Worker Pool for expensive tasks.
 
 ![NodeJS](node.webp)
 

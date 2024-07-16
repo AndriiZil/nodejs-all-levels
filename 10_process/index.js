@@ -125,20 +125,20 @@ console.log(process.cpuUsage()); // { user: 56364, system: 0 }
 console.log(process.cwd()); // /home/andrii/Documents/github/nodejs-all-levels/10_process
 
 process.emitWarning('Something happened!', {
-    code: 'MY_WARNING',
-    detail: 'This is some additional information'
+  code: 'MY_WARNING',
+  detail: 'This is some additional information',
 });
 
 process.on('warning', (warn) => {
-    console.warn(warn);
-})
+  console.warn(warn);
+});
 
 if (process.getegid) {
-    console.log(`Current gid: ${process.getegid()}`); // Current gid: 1000
+  console.log(`Current gid: ${process.getegid()}`); // Current gid: 1000
 }
 
 if (process.geteuid) {
-    console.log(`Current uid: ${process.geteuid()}`); // Current uid: 1000
+  console.log(`Current uid: ${process.geteuid()}`); // Current uid: 1000
 }
 
 console.log(process.hrtime()); // [ 23113, 772553753 ]
@@ -156,7 +156,7 @@ console.log(process.memoryUsage()); /*
 */
 
 process.nextTick(() => {
-    console.log('nextTick callback');
+  console.log('nextTick callback');
 });
 
 console.log(process.platform); // linux
@@ -184,6 +184,5 @@ console.log(process.report);
       reportOnUncaughtException: [Getter/Setter]
     }
 */
-
 
 console.log(process.report.writeReport());

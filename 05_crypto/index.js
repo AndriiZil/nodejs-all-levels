@@ -1,16 +1,9 @@
 'use strict';
 
-const {
-  createHmac,
-  scrypt,
-  randomFill,
-  createCipheriv
-} = require('node:crypto');
+const { createHmac, scrypt, randomFill, createCipheriv } = require('node:crypto');
 
 const secret = 'abcdefg';
-const hash = createHmac('sha256', secret)
-  .update('I love cupcakes')
-  .digest('hex');
+const hash = createHmac('sha256', secret).update('I love cupcakes').digest('hex');
 
 console.log('HASH', hash); // c0fa1bc00531bd78ef38c628449c5102aeabd49b5dc3a2a516ea6ea959d6658e
 
@@ -31,7 +24,7 @@ scrypt(password, 'salt', 24, (err, key) => {
     let encrypted = '';
     cipher.setEncoding('hex');
 
-    cipher.on('data', (chunk) => encrypted += chunk);
+    cipher.on('data', (chunk) => (encrypted += chunk));
     cipher.on('end', () => console.log('KEY', encrypted)); // KEY ef244a23ebcb2ca5bd8850690f92a5b10cf74041a79008eff99d9c9938469899
 
     cipher.write('some clear text data');
