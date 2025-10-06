@@ -2,7 +2,7 @@
 
 const os = require('os');
 
-console.log('os.arch()', os.arch()); // x64
+console.log('os.arch()', os.arch()); // x64, arm64
 
 console.log('os.cpus()', os.cpus());
 /**
@@ -77,7 +77,7 @@ console.log('os.networkInterfaces()', os.networkInterfaces()); /*
        cidr: 'fe80::c78b:5d92:d4b6:18af/64' } ] }
 */
 
-console.log('os.platform()', os.platform()); // linux
+console.log('os.platform()', os.platform()); // linux, darwin
 
 console.log('os.release()', os.release()); // 5.4.0-52-generic
 
@@ -85,7 +85,7 @@ console.log('os.tmpdir()', os.tmpdir()); // /tmp
 
 console.log('os.totalmem()', os.totalmem()); // 16734515200
 
-console.log('os.type()', os.type()); // Linux
+console.log('os.type()', os.type()); // Linux, Darwin
 
 console.log('os.uptime()', os.uptime()); // 7915.57
 
