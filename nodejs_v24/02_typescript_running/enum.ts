@@ -1,5 +1,5 @@
 enum Example {
-  name = 'ANDRII'
+  name = 'ANDRII',
 }
 
 let user: Example = Example.name;

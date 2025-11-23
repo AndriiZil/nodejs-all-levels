@@ -53,3 +53,24 @@
 - [Top 100 Node.js interview questions and answers in 2024](https://www.turing.com/interview-questions/node-js)
 - [Top 50 NodeJS Interview Questions and Answers for 2024](https://javascriptcentric.medium.com/top-50-nodejs-interview-questions-and-answers-for-2024-5e460dac7852)
 - [112 Node.js Interview Questions to Ace Your Interviews](https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions)
+
+```bash
+┌───────────────────────────────────────────────┐
+│                  JavaScript                   │
+│        ┌───────────────────────────┐          │
+│        │   Node.js JS API (fs, http...)        │
+│        └───────────────┬──────────┘            │
+│                        │                       │
+├────────────────────────┼───────────────────────┤
+│                 C++ Bindings (N-API)           │
+├────────────────────────┼───────────────────────┤
+│                      libuv                     │
+│      (Event Loop, Thread Pool, Async I/O)      │
+├────────────────────────┼───────────────────────┤
+│              External Libraries (C/C++)        │
+│ (OpenSSL, zlib, llhttp, c-ares, nghttp2 ...)  │
+├────────────────────────┼───────────────────────┤
+│                     V8 Engine                  │
+│   (Ignition, TurboFan, GC, JS Runtime)         │
+└───────────────────────────────────────────────┘
+```

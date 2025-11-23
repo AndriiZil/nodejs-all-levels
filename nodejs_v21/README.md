@@ -1,6 +1,6 @@
 # Node.js v21
 
-- `Node.js 21.0` introduces stable `Fetch API`, experimental `WebSocket API`, an updated V8 engine, 
+- `Node.js 21.0` introduces stable `Fetch API`, experimental `WebSocket API`, an updated V8 engine,
 - improved `ES Module handling`, and new debugging tools, among other features.
 
 1. Stable Fetch API

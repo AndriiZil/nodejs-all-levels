@@ -10,5 +10,4 @@ async function logTimers() {
   console.log('Do something else', { res });
 }
 
-
-logTimers()
+logTimers();

@@ -14,5 +14,4 @@ async function callExampleAP() {
   }
 }
 
-
 callExampleAP().then(console.log);
